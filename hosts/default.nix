@@ -8,16 +8,16 @@
     inherit (inputs.nixpkgs.lib) nixosSystem;
     howdy = inputs.nixpkgs-howdy;
   in {
-    io = nixosSystem {
+    ThinkTwice = nixosSystem {
       modules =
         [
-          ./io
+          ./ThinkTwice
           ../modules/bluetooth.nix
           ../modules/greetd.nix
           ../modules/desktop.nix
           ../modules/gamemode.nix
           ../modules/lanzaboote.nix
-          {home-manager.users.mihai.imports = homeImports."mihai@io";}
+          {home-manager.users.noah.imports = homeImports."noah@ThinkTwice";}
           {disabledModules = ["security/pam.nix"];}
           "${howdy}/nixos/modules/security/pam.nix"
           "${howdy}/nixos/modules/services/security/howdy"

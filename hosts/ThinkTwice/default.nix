@@ -8,12 +8,6 @@
 }: {
   imports = [./hardware-configuration.nix];
 
-  age.secrets.spotify = {
-    file = "${self}/secrets/spotify.age";
-    owner = "mihai";
-    group = "users";
-  };
-
   boot = {
     binfmt.emulatedSystems = ["aarch64-linux" "riscv64-linux"];
 
@@ -33,7 +27,7 @@
 
   environment.systemPackages = [config.boot.kernelPackages.cpupower];
 
-  networking.hostName = "io";
+  networking.hostName = "ThinkTwice";
 
   programs = {
     # enable hyprland and required options
@@ -66,7 +60,7 @@
     };
   };
 
-  security.tpm2.enable = true;
+  security.tpm2.enable = false;
 
   services = {
     # for SSD/NVME
@@ -86,19 +80,6 @@
     linux-enable-ir-emitter = {
       enable = true;
       package = inputs.nixpkgs-howdy.legacyPackages.${pkgs.system}.linux-enable-ir-emitter;
-    };
-
-    kmonad.keyboards = {
-      io = {
-        name = "io";
-        device = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
-        defcfg = {
-          enable = true;
-          fallthrough = true;
-          allowCommands = false;
-        };
-        config = builtins.readFile "${self}/modules/main.kbd";
-      };
     };
   };
 }

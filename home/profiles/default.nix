@@ -18,7 +18,7 @@
   ];
 
   homeImports = {
-    "mihai@io" = [./io] ++ sharedModules;
+    "noah@ThinkTwice" = [./ThinkTwice] ++ sharedModules;
     "mihai@rog" = [./rog] ++ sharedModules;
     server = [./server] ++ sharedModules;
   };
@@ -32,8 +32,8 @@ in {
 
   flake = {
     homeConfigurations = withSystem "x86_64-linux" ({pkgs, ...}: {
-      "mihai@io" = homeManagerConfiguration {
-        modules = homeImports."mihai@io";
+      "noah@ThinkTwice" = homeManagerConfiguration {
+        modules = homeImports."noah@ThinkTwice";
         inherit pkgs;
       };
 
