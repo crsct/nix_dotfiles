@@ -25,6 +25,7 @@ in {
     ./xdg.nix
     ./yazi
     ./zathura.nix
+    ./nautilus.nix
   ];
 
   programs = {
@@ -39,7 +40,7 @@ in {
 
     firefox = {
       enable = true;
-      profiles.mihai = {};
+      profiles.noah = {};
     };
   };
 

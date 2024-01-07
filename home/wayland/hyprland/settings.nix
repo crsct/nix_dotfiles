@@ -67,12 +67,12 @@ in {
     };
 
     input = {
-      kb_layout = "ro";
+      kb_layout = "eu";
 
       # focus change on cursor move
       follow_mouse = 1;
       accel_profile = "flat";
-      touchpad.scroll_factor = 0.1;
+      touchpad.scroll_factor = 0.8;
     };
 
     dwindle = {
@@ -104,14 +104,4 @@ in {
 
     debug.disable_logs = false;
   };
-
-  wayland.windowManager.hyprland.extraConfig = ''
-    plugin {
-      csgo-vulkan-fix {
-        res_w = 1280
-        res_h = 800
-        class = cs2
-      }
-    }
-  '';
 }

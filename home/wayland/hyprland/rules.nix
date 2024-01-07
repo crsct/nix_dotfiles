@@ -38,7 +38,7 @@ in {
 
       # idle inhibit while watching videos
       "idleinhibit focus, class:^(mpv|.+exe|celluloid)$"
-      "idleinhibit focus, class:^(firefox)$, title:^(.*YouTube.*)$"
+      "idleinhibit focus, class:^(firefox)$, title:^(.*YouTube.*)|(*Piped)$"
       "idleinhibit fullscreen, class:^(firefox)$"
 
       "dimaround, class:^(gcr-prompter)$"

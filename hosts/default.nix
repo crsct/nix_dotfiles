@@ -6,7 +6,7 @@
 }: {
   flake.nixosConfigurations = let
     inherit (inputs.nixpkgs.lib) nixosSystem;
-    howdy = inputs.nixpkgs-howdy;
+    # howdy = inputs.nixpkgs-howdy;
   in {
     ThinkTwice = nixosSystem {
       modules =
@@ -18,10 +18,11 @@
           ../modules/gamemode.nix
           ../modules/lanzaboote.nix
           {home-manager.users.noah.imports = homeImports."noah@ThinkTwice";}
-          {disabledModules = ["security/pam.nix"];}
-          "${howdy}/nixos/modules/security/pam.nix"
-          "${howdy}/nixos/modules/services/security/howdy"
-          "${howdy}/nixos/modules/services/misc/linux-enable-ir-emitter.nix"
+          ../modules/security.nix
+          # {disabledModules = ["security/pam.nix"];}
+          # "${howdy}/nixos/modules/security/pam.nix"
+          # "${howdy}/nixos/modules/services/security/howdy"
+          # "${howdy}/nixos/modules/services/misc/linux-enable-ir-emitter.nix"
         ]
         ++ sharedModules;
     };

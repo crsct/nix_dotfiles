@@ -30,14 +30,15 @@ in {
       [
         # compositor commands
         "$mod SHIFT, E, exec, pkill Hyprland"
-        "$mod, Q, killactive,"
+        "$mod SHIFT, Q, killactive,"
         "$mod, F, fullscreen,"
         "$mod, G, togglegroup,"
         "$mod SHIFT, N, changegroupactive, f"
         "$mod SHIFT, P, changegroupactive, b"
         "$mod, R, togglesplit,"
         "$mod, T, togglefloating,"
-        "$mod, P, pseudo,"
+        # "$mod, P, pseudo,"
+        "$mod, P, pin,"
         "$mod ALT, ,resizeactive,"
 
         # toggle "monocle" (no_gaps_when_only)
@@ -86,6 +87,7 @@ in {
 
     bindr = [
       # launcher
+      "$mod, SUPER_L D, exec, pkill .${default.launcher}-wrapped || run-as-service ${default.launcher}"
       "$mod, SUPER_L, exec, pkill .${default.launcher}-wrapped || run-as-service ${default.launcher}"
     ];
 

@@ -10,7 +10,7 @@
     # we need git for flakes
     pkgs.git
   ];
-  environment.variables.FLAKE = "/home/mihai/Documents/code/dotfiles";
+  environment.variables.FLAKE = "/home/noah/Development/nix_dotfiles";
 
   nh = {
     enable = true;
@@ -27,7 +27,7 @@
     buildMachines = lib.filter (x: x.hostName != config.networking.hostName) [
       {
         system = "aarch64-linux";
-        sshUser = "mihai";
+        sshUser = "noah";
         sshKey = "/etc/ssh/ssh_host_ed25519_key";
         maxJobs = 4;
         hostName = "alpha";

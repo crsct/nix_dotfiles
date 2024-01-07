@@ -1,6 +1,6 @@
 {
   imports = [
-    ../../editors/helix
+    # ../../editors/helix
     ../../editors/neovim
     ../../programs
     ../../programs/games.nix
@@ -14,7 +14,7 @@
   ];
 
   home.sessionVariables = {
-    GDK_SCALE = "2";
+    GDK_SCALE = "1";
   };
 
   wayland.windowManager.hyprland.settings = let

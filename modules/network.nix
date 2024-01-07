@@ -12,8 +12,6 @@
       checkReversePath = "loose";
 
       allowedUDPPorts = [
-        # allow the Tailscale UDP port through the firewall
-        config.services.tailscale.port
         5353
         # syncthing QUIC
         22000
@@ -56,7 +54,7 @@
     resolved.enable = true;
 
     # inter-machine VPN
-    tailscale.enable = true;
+    tailscale.enable = false;
   };
 
   # Don't wait for network startup

@@ -16,7 +16,7 @@
     supportedLocales = [
       "en_US.UTF-8/UTF-8"
       "ja_JP.UTF-8/UTF-8"
-      "ro_RO.UTF-8/UTF-8"
+      "de_DE.UTF-8/UTF-8"
     ];
   };
 
@@ -45,9 +45,9 @@
   # don't touch this
   system.stateVersion = lib.mkDefault "23.11";
 
-  time.timeZone = lib.mkDefault "Europe/Bucharest";
+  time.timeZone = lib.mkDefault "Europe/Berlin";
 
-  users.users.mihai = {
+  users.users.noah = {
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = ["adbusers" "input" "libvirtd" "networkmanager" "plugdev" "transmission" "video" "wheel"];

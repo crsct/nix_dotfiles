@@ -10,11 +10,11 @@
     dirHashes = {
       dl = "$HOME/Downloads";
       docs = "$HOME/Documents";
-      code = "$HOME/Documents/code";
-      dots = "$HOME/Documents/code/dotfiles";
+      code = "$HOME/Development";
+      dots = "$HOME/Development/nix_dotfiles";
       pics = "$HOME/Pictures";
       vids = "$HOME/Videos";
-      nixpkgs = "$HOME/Documents/code/git/nixpkgs";
+      # nixpkgs = "$HOME/Documents/code/git/nixpkgs";
     };
     dotDir = ".config/zsh";
     history = {
