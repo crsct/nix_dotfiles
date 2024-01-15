@@ -7,7 +7,6 @@
 {
   imports = [
     ./rnnoise.nix
-    ./spicetify.nix
   ];
 
   home.packages = with pkgs; [

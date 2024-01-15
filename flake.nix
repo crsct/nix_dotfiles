@@ -88,11 +88,6 @@
 
     hyprpaper.url = "github:hyprwm/hyprpaper";
 
-    kmonad = {
-      url = "github:kmonad/kmonad?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     lanzaboote.url = "github:nix-community/lanzaboote";
 
     matugen = {
@@ -119,11 +114,6 @@
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "fu";
-    };
-
-    spicetify-nix = {
-      url = "github:the-argus/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     devenv = {

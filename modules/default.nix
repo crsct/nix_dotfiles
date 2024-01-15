@@ -24,10 +24,8 @@ in {
             };
           }
 
-          inputs.agenix.nixosModules.default
           inputs.hm.nixosModule
           inputs.hyprland.nixosModules.default
-          inputs.kmonad.nixosModules.default
           inputs.nix-gaming.nixosModules.pipewireLowLatency
           inputs.nh.nixosModules.default
           inputs.lanzaboote.nixosModules.lanzaboote

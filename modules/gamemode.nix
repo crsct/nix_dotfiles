@@ -32,6 +32,7 @@ in {
         renice = 15;
       };
       custom = {
+        # TODO: only when hyprland is enabled
         start = startscript.outPath;
         end = endscript.outPath;
       };

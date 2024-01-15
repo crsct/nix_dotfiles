@@ -27,7 +27,7 @@
 
   environment.systemPackages = [config.boot.kernelPackages.cpupower];
 
-  networking.hostName = "ThinkTwice";
+  networking.hostName = "kadosei";
 
   programs = {
     # enable hyprland and required options

@@ -17,6 +17,10 @@
     GDK_SCALE = "1";
   };
 
+  programs.seahorse.enable = lib.mkDefault true;
+
+  programs.file-roller.enable = true;
+
   wayland.windowManager.hyprland.settings = let
   in {
     monitor = [

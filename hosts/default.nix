@@ -8,44 +8,34 @@
     inherit (inputs.nixpkgs.lib) nixosSystem;
     # howdy = inputs.nixpkgs-howdy;
   in {
-    ThinkTwice = nixosSystem {
+    Kadosei = nixosSystem {
       modules =
         [
-          ./ThinkTwice
+          ./kadosei
           ../modules/bluetooth.nix
+          ../modules/network.nix
           ../modules/greetd.nix
           ../modules/desktop.nix
           ../modules/gamemode.nix
           ../modules/lanzaboote.nix
-          {home-manager.users.noah.imports = homeImports."noah@ThinkTwice";}
+          ../modules/hyprland.nix
+          {home-manager.users.noah.imports = homeImports."noah@kadosei";}
           ../modules/security.nix
-          # {disabledModules = ["security/pam.nix"];}
+          {disabledModules = ["security/pam.nix"];}
           # "${howdy}/nixos/modules/security/pam.nix"
           # "${howdy}/nixos/modules/services/security/howdy"
           # "${howdy}/nixos/modules/services/misc/linux-enable-ir-emitter.nix"
         ]
         ++ sharedModules;
     };
-
-    rog = nixosSystem {
+    Tenshi = nixosSystem {
       modules =
         [
-          ./rog
-          ../modules/bluetooth.nix
-          ../modules/greetd.nix
+          ./Tenshi
+          ../modules/network.nix
           ../modules/desktop.nix
-          ../modules/gamemode.nix
           ../modules/lanzaboote.nix
-          {home-manager.users.mihai.imports = homeImports."mihai@rog";}
-        ]
-        ++ sharedModules;
-    };
-
-    kiiro = nixosSystem {
-      modules =
-        [
-          ./kiiro
-          {home-manager.users.mihai.imports = homeImports.server;}
+          {home-manager.users.noah.imports = homeImports."noah@Tenshi";}
         ]
         ++ sharedModules;
     };

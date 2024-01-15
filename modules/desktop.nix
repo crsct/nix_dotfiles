@@ -123,10 +123,6 @@
     dconf.enable = true;
 
     kdeconnect.enable = true;
-
-    seahorse.enable = true;
-
-    file-roller.enable = true;
   };
 
   qt = {
@@ -203,18 +199,5 @@
 
     # userland niceness
     rtkit.enable = true;
-  };
-
-  xdg.portal = {
-    enable = true;
-    xdgOpenUsePortal = true;
-    config = {
-      common.default = ["gtk"];
-      hyprland.default = ["gtk" "hyprland"];
-    };
-
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
   };
 }

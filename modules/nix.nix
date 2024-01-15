@@ -28,9 +28,18 @@
       {
         system = "aarch64-linux";
         sshUser = "noah";
-        sshKey = "/etc/ssh/ssh_host_ed25519_key";
+        sshKey = "/home/noah/.ssh/id_ed25519";
         maxJobs = 4;
-        hostName = "alpha";
+        hostName = "tenshi";
+        protocol = "ssh-ng";
+        supportedFeatures = ["nixos-test" "benchmark" "kvm" "big-parallel"];
+      }
+      {
+        system = "aarch64-linux";
+        sshUser = "noah";
+        sshKey = "/home/noah/.ssh/id_ed25519";
+        maxJobs = 4;
+        hostName = "kadosei";
         protocol = "ssh-ng";
         supportedFeatures = ["nixos-test" "benchmark" "kvm" "big-parallel"];
       }
