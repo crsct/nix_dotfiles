@@ -107,11 +107,13 @@
         "https://anyrun.cachix.org"
         "https://nix-gaming.cachix.org"
         "https://hyprland.cachix.org"
+        "https://devenv.cachix.org"
       ];
       trusted-public-keys = [
         "nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         "anyrun.cachix.org-1:pqBobmOjI7nKlsUMV25u9QHa9btJK65/C8vnO3p346s="
+        "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
       ];
     };
   };
@@ -123,6 +125,8 @@
     kdeconnect.enable = true;
 
     seahorse.enable = true;
+
+    file-roller.enable = true;
   };
 
   qt = {
@@ -156,6 +160,7 @@
     gnome.gnome-keyring.enable = true;
 
     gvfs.enable = true;
+    gnome.sushi.enable = true;
 
     logind.extraConfig = ''
       HandlePowerKey=suspend

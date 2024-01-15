@@ -25,7 +25,7 @@ in {
     ./xdg.nix
     ./yazi
     ./zathura.nix
-    ./nautilus.nix
+    ./gnome.nix
   ];
 
   programs = {

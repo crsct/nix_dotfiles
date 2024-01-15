@@ -6,6 +6,7 @@
 # networking configuration
 {
   networking = {
+    nameservers = ["1.1.1.1" "192.168.178.83"];
     firewall = {
       trustedInterfaces = ["tailscale0"];
       # required to connect to Tailscale exit nodes
@@ -54,7 +55,7 @@
     resolved.enable = true;
 
     # inter-machine VPN
-    tailscale.enable = false;
+    tailscale.enable = true;
   };
 
   # Don't wait for network startup
